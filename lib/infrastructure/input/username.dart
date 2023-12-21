@@ -1,7 +1,7 @@
 import 'package:formz/formz.dart';
 
 // Define input validation errors
-enum UsernameError { empty, lenght }
+enum UsernameError { empty, length }
 
 // Extend FormzInput and provide the input type and error type.
 class Username extends FormzInput<String, UsernameError> {
@@ -17,7 +17,7 @@ class Username extends FormzInput<String, UsernameError> {
 
     if (value.isEmpty || value.trim().isEmpty) return UsernameError.empty;
 
-    if (value.length < 6) return UsernameError.lenght;
+    if (value.length < 6) return UsernameError.length;
 
     return null;
   }
